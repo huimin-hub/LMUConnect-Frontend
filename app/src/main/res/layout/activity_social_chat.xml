@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lmu_grayIV">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_chat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_chat_chatbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/ui_social_chat_item" />
+
+    <TextView
+        android:id="@+id/text_typing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/social_chat_is_typing"
+        android:textColor="@color/lmu_grayII"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/recycler_chat"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_no_chats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="500dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="@string/social_no_chats"
+        android:textColor="@color/lmu_grayII"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/recycler_chat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/layout_chat_chatbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp"
+        android:background="@color/lmu_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="128dp">
+
+
+        <EditText
+            android:id="@+id/edit_chat_message"
+            style="@style/label_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="10dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="10dp"
+            android:layout_toStartOf="@+id/button_chat_send"
+            android:background="@drawable/chat_input_field"
+            android:hint="@string/social_chat_type_your_message"
+            android:textColorHint="@color/lmu_grayII"
+            android:textColor="@color/lmu_black"
+            android:inputType="textMultiLine"
+            android:maxLines="6"
+            android:textSize="16sp"
+            tools:ignore="Autofill" />
+
+        <ImageButton
+            android:id="@+id/button_chat_send"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ui_social_chat_image_btn"
+            app:layout_constraintStart_toEndOf="@id/edit_chat_message"
+            app:srcCompat="@drawable/social_icon_send" />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

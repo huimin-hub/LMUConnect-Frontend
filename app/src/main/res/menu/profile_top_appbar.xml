@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/profile_edit_finish"
+        android:icon="@drawable/menu_edit_finish"
+        android:title="@string/menu_edit_finish"
+        app:showAsAction="ifRoom"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/profile_edit"
+        android:icon="@drawable/menu_edit"
+        android:title="@string/menu_edit"
+        app:showAsAction="ifRoom"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/profile_logout"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:icon="@drawable/app_logout"
+        android:iconTint="@color/lmu_white"
+        android:title="@string/social_profile_log_out"
+        app:showAsAction="ifRoom"
+        android:visible="true" />
+
+</menu>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu.edit_mode.MenuEditModeActivity"
+    android:scrollbars="vertical"
+    android:background="@color/lmu_grayIV">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="20dp">
+
+            <TextView
+                style="@style/title_large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/menu_subtitle1"
+                android:textColor="@color/lmu_black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyview_menu_edit_favourites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="6dp"
+                tools:listitem="@layout/ui_menu_edit_item"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                style="@style/title_large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/menu_edit_subtitle2"
+                android:textColor="@color/lmu_black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyview_menu_edit_others"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="6dp"
+                tools:listitem="@layout/ui_menu_edit_item"
+                android:nestedScrollingEnabled="false"/>
+
+            <ImageButton
+                android:id="@+id/menu_edit_add_link"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/ui_icon_button"
+                android:backgroundTint="@color/lmu_grayIII"
+                android:src="@drawable/menu_edit_plus"
+                android:scaleType="centerCrop"
+                android:padding="8dp"
+                android:layout_margin="8dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

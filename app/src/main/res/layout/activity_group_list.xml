@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/profile_round_corner1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/group_list_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                android:layout_marginStart="36dp"
+                android:padding="12dp"
+                android:src="@drawable/ui_icon_button" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="36dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/group_list_name"
+                    style="@style/title_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:breakStrategy="high_quality"
+                    android:ellipsize="end"
+                    android:hyphenationFrequency="full"
+                    android:maxLines="2"
+                    android:textColor="@color/lmu_white" />
+
+                <TextView
+                    android:id="@+id/group_list_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/lmu_grayII" />
+
+                <TextView
+                    android:id="@+id/group_list_member_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/lmu_grayII" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/title_large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/social_group_members" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyview_group_member_list"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:clipToPadding="false"
+                android:paddingVertical="6dp"
+                tools:listitem="@layout/ui_group_member_item" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_group_list_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="32dp"
+        app:backgroundTint="@color/lmu_green"
+        app:iconTint="@color/lmu_white"
+        app:icon="@drawable/profile_add_friend_filled"
+        app:iconSize="30dp"
+        app:shapeAppearanceOverlay="@style/fab_square"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

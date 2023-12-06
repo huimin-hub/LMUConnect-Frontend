@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lmu_grayIV"
+    android:orientation="vertical"
+    tools:context=".social.SocialFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_social"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/ui_study_tab"
+            app:tabIndicator="@drawable/ui_study_tab"
+            app:tabIndicatorColor="@color/lmu_green"
+            app:tabIndicatorGravity="stretch"
+            app:tabTextAppearance="@style/title_medium"
+            app:tabTextColor="@color/lmu_white" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager_social"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_social_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="16dp"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="@color/lmu_green"
+        android:textColor="@color/lmu_white"
+        android:text="@string/social_friend"
+        app:iconTint="@color/lmu_white"
+        app:icon="@drawable/menu_edit_add"/>
+
+</FrameLayout>

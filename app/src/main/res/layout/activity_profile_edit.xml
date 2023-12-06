@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lmu_grayIV">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/profile_round_corner1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profile_image_edit"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                android:layout_marginStart="36dp"
+                android:padding="4dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="36dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/profile_name_edit"
+                    style="@style/title_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/social_profile_input_field"
+                    android:hint="@string/social_profile_full_name"
+                    android:inputType="text"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="@color/lmu_white"
+                    android:textColorHint="@color/lmu_grayI" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/profile_school_edit"
+                        android:layout_width="56dp"
+                        android:layout_height="28dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/social_profile_input_field"
+                        android:enabled="true"
+                        android:focusable="false"
+                        android:hint="@string/social_profile_lmu"
+                        android:inputType="text"
+                        android:paddingHorizontal="8dp"
+                        android:textColor="@color/lmu_white"
+                        android:textColorHint="@color/lmu_grayI" />
+
+
+                    <EditText
+                        android:id="@+id/profile_degree_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="28dp"
+                        android:background="@drawable/social_profile_input_field"
+                        android:enabled="true"
+                        android:focusable="false"
+                        android:hint="@string/social_profile_degree"
+                        android:inputType="text"
+                        android:paddingHorizontal="8dp"
+                        android:textColor="@color/lmu_white"
+                        android:textColorHint="@color/lmu_grayI" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/profile_major_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/social_profile_input_field"
+                    android:hint="@string/social_profile_major"
+                    android:inputType="text"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="@color/lmu_white"
+                    android:textColorHint="@color/lmu_grayI" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/title_large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/social_profile_contact_infos" />
+
+            <include layout="@layout/ui_profile_edit_tel" />
+
+            <include layout="@layout/ui_profile_edit_email" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="35dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/title_large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="10dp"
+                android:text="@string/social_profile_social_networks" />
+
+            <include layout="@layout/ui_profile_edit_discord" />
+
+            <include layout="@layout/ui_profile_edit_github" />
+
+            <include layout="@layout/ui_profile_edit_ins" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

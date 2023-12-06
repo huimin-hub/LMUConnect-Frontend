@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lmu_grayIV"
+    tools:context=".home.HomeFragment">
+
+    <include layout="@layout/ui_bottom_right_logo_watermark"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/logo_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="16dp"
+            android:background="@color/lmu_grayIV"
+            tools:layout_editor_absoluteX="16dp">
+
+            <ImageView
+                android:layout_width="152.64dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="-40dp"
+                android:fitsSystemWindows="true"
+                android:src="@drawable/logo_full" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_container"
+            tools:layout_editor_absoluteX="20dp">
+
+            <TextView
+                style="@style/title_large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_tv_title" />
+
+            <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
+                android:id="@+id/carouselRecyview_home_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                tools:listitem="@layout/ui_home_news" />
+
+            <TextView
+                style="@style/title_large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="@string/home_tv_title_2" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyview_upcoming_events"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:paddingVertical="6dp"
+                tools:listitem="@layout/ui_study_course_detail_item" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

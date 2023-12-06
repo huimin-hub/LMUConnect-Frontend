@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:elevation="1dp"
+    android:background="@drawable/profile_round_corner_bgd"
+    android:layout_margin="2dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_profile_github_icon"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        android:adjustViewBounds="true"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/profile_round_corner2"
+        app:srcCompat="@drawable/profile_github_icon"/>
+
+
+    <TextView
+        android:id="@+id/tv_profile_github_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/lmu_black"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:minLines="1"
+        android:singleLine="true"
+        style="@style/title_medium"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_profile_github_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/social_profile_github"/>
+
+
+    <EditText
+        android:id="@+id/et_profile_github_content"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:minLines="1"
+        android:singleLine="true"
+        style="@style/body_medium"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="24dp"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_profile_github_icon"
+        app:layout_constraintTop_toTopOf="@id/tv_profile_github_name"
+        android:hint="@string/social_profile_github_edit"
+        android:background="@drawable/social_profile_input_field_light"
+        android:textColor="@color/lmu_black"
+        android:inputType="text"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

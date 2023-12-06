@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text_gchat_date"
+        style="@style/label_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/chat_date_view"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:text="June 10"
+        android:textColor="@color/lmu_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/label_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:text="Someone joined the room"
+        android:textColor="@color/lmu_grayII"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_gchat_date" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_gchat_profile_other"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        app:shapeAppearanceOverlay="@style/chat_room_roundedImageView"
+        android:contentDescription="User Icon"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_gchat_date" />
+
+    <TextView
+        android:id="@+id/text_gchat_user_other"
+        style="@style/label_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Xiaowen Ma"
+        android:textColor="@color/lmu_black"
+        android:textSize="13sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/image_gchat_profile_other"
+        app:layout_constraintTop_toTopOf="@+id/image_gchat_profile_other" />
+
+    <LinearLayout
+        android:id="@+id/layout_gchat_container_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/chat_bubble_other"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/image_gchat_profile_other"
+        app:layout_constraintStart_toStartOf="@+id/text_gchat_user_other"
+        app:layout_constraintTop_toBottomOf="@+id/text_gchat_user_other">
+
+        <TextView
+            android:id="@+id/text_gchat_message_other"
+            style="@style/body_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="260dp"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="12dp"
+            android:text="Message"
+            android:textColor="@color/lmu_black"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/text_gchat_timestamp_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="8:00"
+        android:textColor="@color/lmu_grayII"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/text_gchat_user_other"
+        app:layout_constraintStart_toEndOf="@+id/text_gchat_user_other"
+        app:layout_constraintTop_toTopOf="@+id/text_gchat_user_other" />
+
+
+    <LinearLayout
+        android:id="@+id/layout_gchat_container_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/chat_bubble_me"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_gchat_date">
+
+        <TextView
+            android:id="@+id/text_chat_message_me"
+            style="@style/body_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="260dp"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="12dp"
+            android:text="This is a Message"
+            android:textColor="@color/lmu_white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_chat_timestamp_me"
+        style="@style/label_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="10:00"
+        android:textColor="@color/lmu_grayII"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_gchat_container_me"
+        app:layout_constraintEnd_toStartOf="@+id/layout_gchat_container_me" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

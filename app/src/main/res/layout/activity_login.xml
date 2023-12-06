@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/ui_bottom_right_logo_watermark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp"
+            android:background="@android:color/transparent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                android:elevation="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/lmu_black"
+                app:menu="@menu/loginsignup_top_appbar">
+
+                <ImageView
+                    android:layout_width="152.64dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="15dp"
+                    android:fitsSystemWindows="true"
+                    android:src="@drawable/logo_full" />
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="16dp">
+                <ImageView
+                    android:layout_width="152.64dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="-40dp"
+                    android:fitsSystemWindows="true"
+                    android:src="@drawable/logo_full" />
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="49dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                style="@style/title_large"
+                android:text="@string/login_title" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="start"
+                style="@style/label_large"
+                android:textColor="@color/lmu_grayI"
+                android:text="@string/login_email_title" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_hint_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:startIconDrawable="@drawable/login_email"
+                app:startIconTint="@color/lmu_grayII"
+                android:textColorHint="@color/lmu_grayII"
+                app:hintTextColor="@color/lmu_grayII">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_login_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ui_login_signup_edit_text"
+                    app:boxStrokeColor="@color/lmu_green"
+                    android:textColor="@color/lmu_grayI"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="start"
+                style="@style/label_large"
+                android:textColor="@color/lmu_grayI"
+                android:text="@string/login_password_title" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_pwd_hint"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:startIconDrawable="@drawable/login_pwd"
+                app:startIconTint="@color/lmu_grayII"
+                android:textColorHint="@color/lmu_grayII"
+                app:hintTextColor="@color/lmu_grayII"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_login_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ui_login_signup_edit_text"
+                    app:boxStrokeColor="@color/lmu_green"
+                    android:textColor="@color/lmu_grayI"
+                    android:inputType="textPassword"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_login"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="50dp"
+                app:cornerRadius="8dp"
+                android:backgroundTint="@color/lmu_green"
+                style="@style/label_large"
+                android:textColor="@color/lmu_white"
+                android:text="@string/login_btn_title" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_gravity="center_horizontal"
+                style="@style/label_large"
+                android:textColor="@color/lmu_grayII"
+                android:text="@string/login_suggestion_line1" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                style="@style/label_large"
+                android:textColor="@color/lmu_grayII"
+                android:text="@string/login_suggestion_line2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_login_to_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/lmu_green"
+                android:text="@string/signup_title"
+                style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

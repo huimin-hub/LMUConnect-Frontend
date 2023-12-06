@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".study.courses.StudyCoursesFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:visibility="invisible"
+                    style="@style/title_large"
+                    android:id="@+id/tv_study_lectures_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/study_subtitle1"
+                    android:textColor="@color/lmu_black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyview_study_lectures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="6dp"
+                    android:paddingHorizontal="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:clipToPadding="false"
+                    tools:listitem="@layout/ui_study_course_item"
+                    android:nestedScrollingEnabled="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:visibility="invisible"
+                    style="@style/title_large"
+                    android:id="@+id/tv_study_practicals_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/study_subtitle2"
+                    android:textColor="@color/lmu_black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyview_study_practicals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="6dp"
+                    android:paddingHorizontal="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:clipToPadding="false"
+                    tools:listitem="@layout/ui_study_course_item"
+                    android:nestedScrollingEnabled="false"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        style="@style/body_large"
+        android:visibility="gone"
+        android:id="@+id/tv_study_courses_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/study_no_courses_added"
+        android:padding="48dp"
+        android:layout_marginBottom="80dp"/>
+
+</FrameLayout>

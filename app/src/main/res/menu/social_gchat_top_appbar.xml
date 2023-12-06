@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/social_gmember_icon"
+        android:icon="@drawable/social_gchat_members"
+        android:title="@string/social_gchat_group_member"
+        app:showAsAction="ifRoom" />
+
+</menu>

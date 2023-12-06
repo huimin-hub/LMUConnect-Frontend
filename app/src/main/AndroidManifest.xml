@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:name=".SocialApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LMUconnect.NoActionBar"
+        android:enableOnBackInvokedCallback="true"
+        tools:targetApi="33">
+        <receiver
+            android:name="de.lmu.lmuconnect.study.notifications.FetchEventsReceiver"
+            android:enabled="true" />
+        <receiver
+            android:name="de.lmu.lmuconnect.study.notifications.BootupReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="de.lmu.lmuconnect.study.notifications.NotificationReceiver"
+            android:enabled="true" />
+
+        <activity
+            android:name="de.lmu.lmuconnect.social.group.members.GroupMemberListActivity"
+            android:theme="@style/Theme.LMUconnect"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="de.lmu.lmuconnect.social.group.AddGroupActivity"
+            android:label="@string/social_add_group_title"
+            android:theme="@style/Theme.LMUconnect"
+            android:exported="false">
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="" />
+        </activity>
+        <activity
+            android:name="de.lmu.lmuconnect.social.personal.AddFriendsActivity"
+            android:label="@string/social_add_friend_title"
+            android:theme="@style/Theme.LMUconnect"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="de.lmu.lmuconnect.study.courses.add.CourseFilterActivity"
+            android:exported="false"
+            android:label="Filter by"
+            android:theme="@style/Theme.LMUconnect">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="de.lmu.lmuconnect.social.profile.SocialProfileActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.LMUconnect">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="de.lmu.lmuconnect.social.profile.SocialProfileEditActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.LMUconnect">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="de.lmu.lmuconnect.social.personal.chat.SocialChatActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.LMUconnect">
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="" />
+        </activity>
+        <activity
+            android:name="de.lmu.lmuconnect.social.profile.SocialProfileOthersActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.LMUconnect">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="de.lmu.lmuconnect.social.group.chat.SocialGroupChatActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.LMUconnect">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="de.lmu.lmuconnect.study.courses.info.CourseInfoActivity"
+            android:exported="false"
+            android:label=""
+            android:theme="@style/Theme.LMUconnect">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="de.lmu.lmuconnect.study.courses.add.AddCourseActivity"
+            android:exported="false"
+            android:label="@string/study_course_register"
+            android:theme="@style/Theme.LMUconnect">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="de.lmu.lmuconnect.menu.edit_mode.MenuEditModeActivity"
+            android:exported="false"
+            android:label="@string/menu_edit_title"
+            android:theme="@style/Theme.LMUconnect">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="de.lmu.lmuconnect.menu.add_item.AddNewMenuItemActivity"
+            android:exported="false"
+            android:label="@string/menu_add_new"
+            android:theme="@style/Theme.LMUconnect">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="de.lmu.lmuconnect.auth.LoginActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="de.lmu.lmuconnect.auth.SignupActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="de.lmu.lmuconnect.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:ignore="MissingClass"
+            tools:node="merge">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+    </application>
+
+</manifest>

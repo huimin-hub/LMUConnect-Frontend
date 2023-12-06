@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.lmu.lmuconnect.menu.add_item.AddNewMenuItemActivity">
+
+    <TextView
+        android:id="@+id/textView_name"
+        style="@style/title_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/menu_add_name"
+        android:textColor="@color/lmu_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/menu_add_name_desc"
+        android:textColorHint="@color/lmu_grayII"
+        app:hintTextColor="@color/lmu_grayII"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_name"
+        app:startIconTint="@color/lmu_grayII">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/ui_login_signup_edit_text"
+            android:inputType="text"
+            android:textColor="@color/lmu_grayI"
+            app:boxStrokeColor="@color/lmu_green" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView_url"
+        style="@style/title_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/menu_add_url"
+        android:textColor="@color/lmu_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayout_name" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout_url"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/menu_add_url_desc"
+        android:textColorHint="@color/lmu_grayII"
+        app:hintTextColor="@color/lmu_grayII"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_url"
+        app:startIconTint="@color/lmu_grayII">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_url"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/ui_login_signup_edit_text"
+            android:inputType="textUri"
+            android:textColor="@color/lmu_grayI"
+            app:boxStrokeColor="@color/lmu_green" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView_icon"
+        style="@style/title_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/menu_add_icon"
+        android:textColor="@color/lmu_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayout_url" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

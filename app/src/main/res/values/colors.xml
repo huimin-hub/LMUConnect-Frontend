@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Black to White -->
+    <color name="lmu_black">#232323</color>
+    <color name="lmu_grayI">#626468</color>
+    <color name="lmu_grayII">#C0C1C3</color>
+    <color name="lmu_grayIII">#E6E6E7</color>
+    <color name="lmu_grayIV">#F5F5F5</color>
+    <color name="lmu_white">#FFFFFF</color>
+
+    <!-- Green -->
+    <color name="lmu_green">#00883A</color>
+    <color name="lmu_green_80">#33A061</color>
+    <color name="lmu_green_40">#99CFB0</color>
+    <color name="lmu_green_20">#CCE7D8</color>
+
+    <!-- Orange -->
+</resources>

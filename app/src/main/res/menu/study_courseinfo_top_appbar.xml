@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_unregister"
+        android:icon="@drawable/study_unregister"
+        android:title="@string/study_course_info_unregister"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_open_lsf"
+        android:title="@string/study_course_info_lsf"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_share"
+        android:title="@string/study_course_info_share"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_change_group"
+        android:title="@string/study_course_info_change_group_selection"
+        app:showAsAction="never" />
+
+</menu>
